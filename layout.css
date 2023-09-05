@@ -1,0 +1,73 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+a#return-btn {
+    position: fixed;
+    right: 2em;
+    top: 2em;
+}
+
+img#profile_pic {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 0 90%;
+}
+
+section {
+    margin: 0 1em;
+}
+
+/* First Section */
+section#contact {
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#contact,
+#info {
+    height: 50vh;
+}
+
+section#info {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+/* Last Section */
+section#education {
+    margin-bottom: 1em;
+}
+
+/* span.separator {
+    content: "\00B7";
+} */
+
+/* #skills,
+#experience,
+#education {
+    height: 100vh;
+} */
+
+#info>p {
+    width: 40%;
+    text-align: center;
+}
+
+nav {
+    width: 50%;
+}
+
+#navigation-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
