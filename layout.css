@@ -2,7 +2,31 @@ html,
 body {
     height: 100%;
     margin: 0;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: 'Roboto Mono', monospace;
 }
+
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
+    --dark-accent-color: #767676;
+    --light-accent-color: #ababab;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--secondary-color);
+}
+
+/* KM TODO: Replace this with an animation for header hover effects (if I find them necessary) */
+/* h1:hover,
+h2:hover,
+h3:hover {
+    color: var(--dark-accent-color)
+} */
+
 
 a#return-btn {
     position: fixed;
@@ -16,6 +40,13 @@ img#profile_pic {
     border-radius: 50%;
     object-fit: cover;
     object-position: 0 90%;
+    transition: all 0.5s ease-out;
+    filter: grayscale(75%);
+}
+
+img#profile_pic:hover {
+    filter: grayscale(0%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 section {
@@ -41,14 +72,34 @@ section#info {
     align-items: center;
 }
 
+section#contact>a {
+    padding: 2em;
+    background-color: var(--dark-accent-color);
+    border-radius: 5%;
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: all 0.5s ease-out;
+}
+
+section#contact>a:hover,
+section#contact>a:active {
+    background-color: var(--light-accent-color);
+    color: var(--secondary-color);
+    box-shadow: blue 0px 0px 0px 2px inset,
+        rgb(255, 255, 255) 10px -10px 0px -3px,
+        rgb(31, 193, 27) 10px -10px,
+        rgb(255, 255, 255) 20px -20px 0px -3px,
+        rgb(255, 217, 19) 20px -20px,
+        rgb(255, 255, 255) 30px -30px 0px -3px,
+        rgb(255, 156, 85) 30px -30px,
+        rgb(255, 255, 255) 40px -40px 0px -3px,
+        rgb(255, 85, 85) 40px -40px;
+}
+
 /* Last Section */
 section#education {
     margin-bottom: 1em;
 }
-
-/* span.separator {
-    content: "\00B7";
-} */
 
 /* #skills,
 #experience,
